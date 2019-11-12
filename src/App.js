@@ -8,6 +8,10 @@ import Signup from './components/Signup'
 import { Route, Switch, withRouter } from 'react-router-dom'
 import { logout } from './actions/usersAction'
 import NavBar from './components/NavBar'
+import { getMyTrips } from './actions/tripsAction'
+import Home from './components/Home'
+
+
 
 
 
@@ -31,9 +35,12 @@ componentDidMount(){
               <h1>come on kayak</h1>
             </div>
             <NavBar />
+            <Route path='/' component={Home} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/logout' component={logout} />
+                <Route path='/mytrips' render={getMyTrips}/>
+
 
 
 

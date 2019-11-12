@@ -1,9 +1,93 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
+.ui.large.buttons {
+  text-indent: 10px;
+  padding: 20px
+}
+
+.style.head {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px
+}
+
+#main_head h1{
+  font-family: 'Monofett', cursive;
+ /* letter-spacing: 30px; */
+  font-size: 70px;
+  /* color: green */
+}
+
+.log.out .ui.button {
+  color: red;
+  background-color: white
+
+}
+
+.ui.button:hover {
+  color: #40E0D0;
+
+}
+
+.ui.form button:hover {
+  color: #40E0D0;
+
+}
+
+/* .ui.form button:hover {
+  background-color: #696969;
+
+} */
+
+
+/* a:hover {
+  background-color: yellow;
+} */
+
+
+.ui.extra.content.trip.comments {
+  color: red
+}
+hr {
+
+  border-top: 1px ;
+  color: #141414;
+}
+
+
+
+
+
+
+/*
+
+font-family: 'Rochester', cursive;
+font-family: 'Montez', cursive;
+font-family: 'Monofett', cursive;
+ */
+
+/* label underline focus color */
+  /* .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  } */
+
+
+  .container {
+  margin-top: 20px;
+
+
+}
+
+
+/* .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  pointer-events: none;
 }
 
 .App-header {
@@ -18,5 +102,14 @@
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #61dafb;
 }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

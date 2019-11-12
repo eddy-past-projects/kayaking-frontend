@@ -1,5 +1,5 @@
 import React from 'react'
-import CommentsContainer from '../containers/CommentsContainer'
+// import CommentsContainer from '../containers/CommentsContainer'
 import { Card, Image, Icon, Button } from 'semantic-ui-react'
 // import { deleteTrip } from '../actions/tripsAction'
 // import { connect } from 'react-redux'
