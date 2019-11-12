@@ -67,7 +67,7 @@ export const logout = event => {
 export const getCurrentUser = () => {
   return dispatch => {
     return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
-      credentials: "include",
+      credentials: "omit",
       method: "GET",
       headers: {
         "Content-Type": "application/json"
