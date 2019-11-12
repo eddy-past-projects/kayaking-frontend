@@ -47,7 +47,7 @@ export const fetchTrips = () => {
 export const addTrip = trip => {
   console.log('addTrip', trip)
   return dispatch => {
-    return fetch('https://kayaks-backend-api.herokuapp.com/trips',{
+    return fetch('https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export const deleteTrip = id => {
   console.log('deleteTrip', id)
   return dispatch => {
     dispatch({ type: 'DELETE_TRIP', id})
-    fetch(`https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
+    fetch(`https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
       method: 'DELETE'
     })
   }
