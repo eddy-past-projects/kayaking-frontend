@@ -25,7 +25,7 @@ export const clearCurrentUser = () => {
 export const login = (credentials) => {
   return dispatch => {
     return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-      credentials: "include",
+      credentials: "omit",
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -58,7 +58,7 @@ export const logout = event => {
 
 
     return fetch('https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/logout', {
-      credentials: "include",
+      credentials: "omit",
       method: "DELETE"
     })
   }
@@ -93,7 +93,7 @@ export const signup = (credentials) => {
   }
   return dispatch => {
     return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
-      credentials: "include",
+      credentials: "omit",
       method: "POST",
       headers: {
         "Content-Type": "application/json"
