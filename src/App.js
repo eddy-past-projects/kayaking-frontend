@@ -11,6 +11,8 @@ import NavBar from './components/NavBar'
 import { getMyTrips } from './actions/tripsAction'
 import Home from './components/Home'
 import TripForm from './components/TripForm'
+import DictionaryContainer from './containers/DictionaryContainer'
+
 
 
 
@@ -37,14 +39,17 @@ componentDidMount(){
               <h1>come on kayak</h1>
             </div>
             <NavBar />
-            <Route path='/' component={Home} />
+            <Route exact path='/dictionary' component={DictionaryContainer} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/logout' component={logout} />
-              <Route path='/newtrip' component={TripForm}/>
-                <Route path='/mytrips' render={getMyTrips}/>
+            <Route path='/newtrip' component={TripForm}/>
+              <Route path='/mytrips' render={getMyTrips}/>
 
-
+            <Switch>
+              <Route exact path='/dictionary' render={null} />
+              <Route component={Home} />
+            </Switch>
 
 
 

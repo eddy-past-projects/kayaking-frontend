@@ -9,7 +9,7 @@ import tripsReducer from './reducers/tripsReducer';
 import commentsReducer from './reducers/commentsReducer';
 import logInReducer from './reducers/logInReducer';
 import signUpReducer from './reducers/signUpReducer';
-// import dictionaryReducer from './reducers/dictionaryReducer';
+import dictionaryReducer from './reducers/dictionaryReducer';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const reducer = combineReducers({
   comments: commentsReducer,
   logIn: logInReducer,
   signUp: signUpReducer,
-  // words: dictionaryReducer
+  words: dictionaryReducer
 
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
