@@ -24,8 +24,8 @@ export const clearCurrentUser = () => {
 // asynchronous action creators
 export const login = (credentials) => {
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-      credentials: "omit",
+    return fetch("https://kayaks-backend-api.herokuapp.com/login", {
+      credentials: "include",
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -57,8 +57,8 @@ export const logout = event => {
     // dispatch(clearMyTrips())
 
 
-    return fetch('https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/logout', {
-      credentials: "omit",
+    return fetch('https://kayaks-backend-api.herokuapp.com/logout', {
+      credentials: "include",
       method: "DELETE"
     })
   }
@@ -66,8 +66,8 @@ export const logout = event => {
 
 export const getCurrentUser = () => {
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
-      credentials: "omit",
+    return fetch("https://kayaks-backend-api.herokuapp.com/get_current_user", {
+      credentials: "include",
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -92,8 +92,8 @@ export const signup = (credentials) => {
     user: credentials
   }
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
-      credentials: "omit",
+    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
+      credentials: "include",
       method: "POST",
       headers: {
         "Content-Type": "application/json"
