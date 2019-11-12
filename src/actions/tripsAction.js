@@ -16,7 +16,7 @@ export const clearMyTrips = () => {
 export const fetchTrips = () => {
   return dispatch => {
     dispatch({ type: 'LOADING_TRIPS'})
-    return fetch('https://kayaks-backend-api.herokuapp.com/trips',{'mode': 'no-cors'})
+    return fetch('https://kayaks-backend-api.herokuapp.com/trips')
 
     .then(resp => resp.json())
     // .then(console.log)
