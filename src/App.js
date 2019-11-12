@@ -10,6 +10,8 @@ import { logout } from './actions/usersAction'
 import NavBar from './components/NavBar'
 import { getMyTrips } from './actions/tripsAction'
 import Home from './components/Home'
+import TripForm from './components/TripForm'
+
 
 
 
@@ -39,6 +41,7 @@ componentDidMount(){
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/logout' component={logout} />
+              <Route path='/newtrip' component={TripForm}/>
                 <Route path='/mytrips' render={getMyTrips}/>
 
 

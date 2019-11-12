@@ -85,7 +85,7 @@ export const deleteTrip = id => {
 export const getMyTrips = id => {
     return dispatch => {
         dispatch({ type: 'SET_MY_TRIPS'})
-        return fetch(`https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
+        return fetch(`https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
             method: 'GET',
           })
           .then(resp => resp.json())
