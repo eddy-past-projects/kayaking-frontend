@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import usersReducer from './reducers/usersReducer';
-// import tripsReducer from './reducers/tripsReducer';
+import tripsReducer from './reducers/tripsReducer';
 // import commentsReducer from './reducers/commentsReducer';
 import logInReducer from './reducers/logInReducer';
 import signUpReducer from './reducers/signUpReducer';
@@ -17,7 +17,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 const reducer = combineReducers({
   users: usersReducer ,
-  // trips: tripsReducer,
+  trips: tripsReducer,
   // comments: commentsReducer,
   logIn: logInReducer,
   signUp: signUpReducer,
