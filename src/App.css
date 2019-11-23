@@ -1,22 +1,17 @@
 .App {
   text-align: center;
-
 }
 
 .ui.large.button  {
   margin: .5% ;
-
 }
 
 .ui.form button {
   margin: 1% ;
-
 }
 
 .ui.small.button  {
   margin: .5% ;
-
-
 }
 
 .style.head {
@@ -34,15 +29,12 @@
   margin: 3% 0  3% 0;
 }
 
-
 .ui.button:hover {
   color: #40E0D0;
-
 }
 
 .ui.form button:hover {
   color: #40E0D0;
-
 }
 
 hr {
@@ -50,10 +42,6 @@ hr {
   color: #141414;
 }
 
-
-
   .container {
   margin-top: 20px;
-
-
 }

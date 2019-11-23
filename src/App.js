@@ -14,17 +14,6 @@ import TripForm from './components/TripForm'
 import DictionaryContainer from './containers/DictionaryContainer'
 
 
-
-
-
-
-
-
-
-
-
-
-
 class App extends React.Component {
 
 componentDidMount(){
@@ -50,9 +39,6 @@ componentDidMount(){
               <Route exact path='/dictionary' render={null} />
               <Route component={Home} />
             </Switch>
-
-
-
 
           </Container>
         </div>

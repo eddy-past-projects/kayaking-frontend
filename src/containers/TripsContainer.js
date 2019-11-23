@@ -16,7 +16,6 @@ class TripsContainer extends React.Component {
     }
   }
   componentDidMount(){
-    // console.log('componentDidMount')
     this.props.fetchTrips()
   }
 
