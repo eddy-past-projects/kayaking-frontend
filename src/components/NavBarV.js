@@ -3,33 +3,10 @@ import { Link } from 'react-router-dom'
 import { Button } from 'semantic-ui-react'
 
 
-class NavBar extends React.Component {
-
-  constructor(props) {
-   super()
-
-   this.state = {
-     width: window.innerWidth
-   }
- }
-
- componentDidMount() {
-   window.addEventListener('resize', this.handleWindowSizeChange);
- }
-
- componentWillUnmount() {
-   window.removeEventListener('resize', this.handleWindowSizeChange);
- }
-
- handleWindowSizeChange = () => {
-   this.setState({ width: window.innerWidth });
- }
-
- render (){
-
+const NavBar = () => {
 
   return (
-    <div className='navBar'>
+    <div>
       <Button.Group size='large'>
         <Link to='/'><Button >home</Button></Link>
         <Link to='/signup'><Button >sign up</Button></Link>
@@ -44,7 +21,6 @@ class NavBar extends React.Component {
       <br/>
     </div>
   )
-}
 }
 
 
