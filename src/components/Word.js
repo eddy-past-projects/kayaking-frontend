@@ -3,7 +3,11 @@ import { Card } from 'semantic-ui-react'
 
 
 
-const Word = ({word}) => {
+class Word extends React.Component {
+
+  render(){
+  console.log('word', this.props)
+  const { word } = this.props
 
   return (
     <Card>
@@ -19,6 +23,7 @@ const Word = ({word}) => {
     </Card.Content>
   </Card>
   )
+}
 }
 
 export default Word

@@ -12,6 +12,7 @@ class DictionaryContainer extends React.Component {
   }
 
   render () {
+    console.log(this.props.words)
     return (
         <div>
           <Words words={this.props.words} />

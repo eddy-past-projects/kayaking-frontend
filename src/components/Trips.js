@@ -7,18 +7,6 @@ import { Card } from 'semantic-ui-react'
 class Trips extends React.Component {
 
 
-
-  // renderTrips (trips) {
-  //   const tripSort = trips.sort((a, b) => {
-  //     if (a.start_date < b.start_date) {return 1}
-  //     if (a.start_date > b.start_date) {return -1}
-  //     return 0
-  //
-  //   })
-  //   return tripSort.map((trip, idx) =>
-  //     <Trip key={idx} trip={trip} deleteTrip={this.props.deleteTrip}/>
-  //   )
-  // }
   constructor(props) {
    super()
 
@@ -86,9 +74,7 @@ if(isMobile){
 } else if(isDesktop){
   itemsPerRow = 4
 }
-// isMobile? itemsPerRow = 1 : itemsPerRow = 4
-// console.log(isMobile? itemsPerRow = 2 : itemsPerRow = 4)
-    // console.log('trips')
+
     return (
 
       <Card.Group itemsPerRow={itemsPerRow}>

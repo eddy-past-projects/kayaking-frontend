@@ -22,7 +22,6 @@ class TripsContainer extends React.Component {
 
 
   render () {
-    // console.log(this.props)
     return (
         <div>
           <Trips trips={this.props.trips} deleteTrip={this.props.deleteTrip} />

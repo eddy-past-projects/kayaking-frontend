@@ -26,19 +26,32 @@ class NavBar extends React.Component {
  }
 
  render (){
+   let isMobile
+    const width = this.state.width
+    width <= 500 ? isMobile = true : isMobile = false
+
+
+    let buttonSize
+    let navbarStyle
+    if (isMobile) {
+      buttonSize = "small"
+      navbarStyle = "NavBar mobile"
+    } else {
+      buttonSize = "large"
+      navbarStyle = "NavBar desktop"
+    }
 
 
   return (
-    <div className='navBar'>
-      <Button.Group size='large'>
-        <Link to='/'><Button >home</Button></Link>
-        <Link to='/signup'><Button >sign up</Button></Link>
-        <Link to='/login'><Button >log in</Button></Link>
-        <Link to='/newtrip'><Button>new trips</Button></Link>
-      <Link to='/mytrips'><Button>my trips</Button></Link>
-      <Link to='/dictionary'><Button>dictionary</Button></Link>
-        <Link to='/logout'><Button>log out</Button></Link>
-      </Button.Group>
+    <div className={navbarStyle}>
+
+        <Link to='/'><Button size={buttonSize} >home</Button></Link>
+        <Link to='/signup'><Button size={buttonSize} >sign up</Button></Link>
+        <Link to='/login'><Button size={buttonSize} >log in</Button></Link>
+        <Link to='/newtrip'><Button size={buttonSize}>new trips</Button></Link>
+      <Link to='/mytrips'><Button size={buttonSize}>my trips</Button></Link>
+      <Link to='/dictionary'><Button size={buttonSize}>dictionary</Button></Link>
+        <Link to='/logout'><Button size={buttonSize}>log out</Button></Link>
       <br/>
       <br/>
       <br/>
