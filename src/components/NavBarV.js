@@ -6,7 +6,7 @@ import { Button } from 'semantic-ui-react'
 class NavBar extends React.Component {
 
 
-
+ 
 
  render (){
 
