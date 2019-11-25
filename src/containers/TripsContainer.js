@@ -8,6 +8,7 @@ import { fetchTrips } from '../actions/tripsAction'
 
 
 class TripsContainer extends React.Component {
+
   //
   componentDidUpdate(prevProps) {
     // console.log('componentDidUpdate', this.props.trips.trips.length)
@@ -19,6 +20,8 @@ class TripsContainer extends React.Component {
     this.props.fetchTrips()
   }
 
+
+  
 
   render () {
     return (
