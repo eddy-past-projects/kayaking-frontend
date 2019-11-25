@@ -7,6 +7,7 @@ const NavBar = () => {
 
   return (
     <div>
+      
       <Button.Group size='large'>
         <Link to='/'><Button >home</Button></Link>
         <Link to='/signup'><Button >sign up</Button></Link>
