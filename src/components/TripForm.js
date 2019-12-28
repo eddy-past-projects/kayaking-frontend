@@ -44,7 +44,7 @@ class TripForm extends React.Component {
             </div>
             <div className="three wide field">
               <label>water type
-                <select onChange={this.handleIfChange} value={this.state.water_type} type="text" name="water_type" placeholder="water type">
+                <select onChange={this.handleIfChange} value={this.state.water_type} type="text" name="water_type" placeholder="water type" autoComplete="off">
                   <option value='select'>select below</option>
                   <option value="bay">bay</option>
                   <option value="lake">lake</option>

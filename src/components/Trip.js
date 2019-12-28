@@ -5,7 +5,6 @@ import { Card, Image, Icon, Button } from 'semantic-ui-react'
 // import { connect } from 'react-redux'
 
 
-
 class Trip extends React.Component {
 
   state ={
