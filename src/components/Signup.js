@@ -26,10 +26,10 @@ const Signup = ({ signUpFormData, updateSignUpForm, signup,  history }) => {
       <div className="ui form">
         <div className="fields">
           <div className="eight wide field">
-            <input value={signUpFormData.name} name="name" type="text" placeholder='name' onChange={handleOnChange} />
+            <input value={signUpFormData.name} name="name" type="text" placeholder='name' onChange={handleOnChange} autoComplete="off"/>
           </div>
           <div className="six wide field">
-            <input value={signUpFormData.password} name="password" type="text" placeholder='password' onChange={handleOnChange} />
+            <input value={signUpFormData.password} name="password" type="text" placeholder='password' onChange={handleOnChange} autoComplete="off"/>
           </div>
           <div className="two wide field">
             <button type="submit" className="ui button">Submit</button>

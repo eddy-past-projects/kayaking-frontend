@@ -27,10 +27,10 @@ const Login = ({ logInFormData, updateLogInForm, login, history }) => {
       <div className="ui form">
         <div className="fields">
           <div className="eight wide field">
-            <input value={logInFormData.name} name="name" type="text" placeholder="name" onChange={handleOnChange} />
+            <input value={logInFormData.name} name="name" type="text" placeholder="name" onChange={handleOnChange} autoComplete="off"/>
           </div>
           <div className="eight wide field">
-            <input value={logInFormData.password} name="password" type="text" placeholder="password" onChange={handleOnChange} />
+            <input value={logInFormData.password} name="password" type="text" placeholder="password" onChange={handleOnChange} autoComplete="off"/>
           </div>
           <div className="two wide field">
             <button type="submit" className="ui button">Submit</button>

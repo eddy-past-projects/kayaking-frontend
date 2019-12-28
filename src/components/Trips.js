@@ -76,10 +76,10 @@ if(isMobile){
 }
 
     return (
+        <Card.Group itemsPerRow={itemsPerRow}>
+          {this.renderTrips(this.props.trips.trips)}
+        </Card.Group>
 
-      <Card.Group itemsPerRow={itemsPerRow}>
-        {this.renderTrips(this.props.trips.trips)}
-      </Card.Group>
     )
   }
 }
