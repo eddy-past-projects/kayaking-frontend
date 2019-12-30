@@ -28,7 +28,7 @@ export const login = (credentials) => {
       credentials: "include",
       method: "POST",
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
       body: JSON.stringify(credentials)
