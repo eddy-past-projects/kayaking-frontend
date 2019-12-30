@@ -2,10 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../actions/usersAction'
 
-const Logout = ({ logout }) => {
+const Logout = ({ logout, history}) => {
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+    logout(history)
+    history.push('/');
+  }
 
   return (
-    <form>
+    <form onSubmit={handleOnSubmit}>
 <div className='log out'>
   <button type="submit" className="ui button">Log out</button>
 </div>

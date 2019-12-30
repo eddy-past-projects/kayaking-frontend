@@ -32,7 +32,7 @@ componentDidMount(){
             <Route exact path='/dictionary' component={DictionaryContainer} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
-            <Route path='/logout' component={Logout} />
+            <Route path='/logout' render={logout} />
             <Route path='/newtrip' component={TripForm}/>
               <Route path='/mytrips' render={getMyTrips}/>
 
