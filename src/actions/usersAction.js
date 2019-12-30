@@ -25,10 +25,10 @@ export const clearCurrentUser = () => {
 export const login = (credentials) => {
   return dispatch => {
     return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-      credentials: "include",
+    
       method: "POST",
       headers: {
-        'Access-Control-Allow-Origin': 'https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login',
+        'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
       body: JSON.stringify(credentials)
