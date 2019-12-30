@@ -23,9 +23,10 @@ export const clearCurrentUser = () => {
 
 // asynchronous action creators
 export const login = (credentials) => {
+  console.log('credentials', credentials)
   return dispatch => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-      credentials: 'include',
+      credentials: 'true',
       method: "POST",
       headers: {
         'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
