@@ -89,7 +89,7 @@ export const signup = (credentials) => {
   console.log('signup', credentials)
   // const userInfo = {
   //   user: credentials
-  }
+  // }
   return dispatch => {
     return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
       // credentials: "include",
