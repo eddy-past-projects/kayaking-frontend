@@ -5,7 +5,8 @@ import Login from './components/Login'
 import { getCurrentUser } from './actions/usersAction'
 import { Container } from 'semantic-ui-react'
 import Signup from './components/Signup'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import Logout from './components/Logout'
+import { Route, Switch } from 'react-router-dom'
 import { logout } from './actions/usersAction'
 import NavBar from './components/NavBar'
 import { getMyTrips } from './actions/tripsAction'
@@ -31,7 +32,7 @@ componentDidMount(){
             <Route exact path='/dictionary' component={DictionaryContainer} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
-            <Route path='/logout' component={logout} />
+            <Route path='/logout' component={Logout} />
             <Route path='/newtrip' component={TripForm}/>
               <Route path='/mytrips' render={getMyTrips}/>
 
