@@ -35,7 +35,6 @@ export const login = (credentials) => {
     })
       .then(resp => resp.json())
       .then(resp => {
-        console.log('login', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
@@ -75,7 +74,6 @@ export const getCurrentUser = () => {
     })
       .then(resp => resp.json())
       .then(resp => {
-        console.log('current user', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
@@ -93,7 +91,7 @@ export const signup = (credentials) => {
     user: credentials
   }
   return dispatch => {
-    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
+    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
       // credentials: "include",
       method: "POST",
       headers: {
@@ -104,7 +102,7 @@ export const signup = (credentials) => {
     })
       .then(resp => resp.json())
       .then(resp => {
-        console.log('signup resp', resp)
+        console.log('signup', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
