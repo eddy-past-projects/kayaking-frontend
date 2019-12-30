@@ -26,7 +26,7 @@ export const login = (credentials) => {
   console.log('credentials', credentials)
   return dispatch => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-      credentials: 'true',
+      credentials: 'include',
       method: "POST",
       headers: {
         'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
@@ -66,7 +66,7 @@ export const logout = event => {
 
 export const getCurrentUser = () => {
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
+    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
       method: "GET",
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -92,7 +92,7 @@ export const signup = (credentials) => {
     user: credentials
   }
   return dispatch => {
-    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
+    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
       // credentials: "include",
       method: "POST",
       headers: {
