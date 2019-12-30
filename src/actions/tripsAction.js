@@ -16,7 +16,7 @@ export const clearMyTrips = () => {
 export const fetchTrips = () => {
   return dispatch => {
     dispatch({ type: 'LOADING_TRIPS'})
-    return fetch('https://kayaks-backend-api.herokuapp.com/trips')
+    return fetch('https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips')
 
     .then(resp => resp.json())
     // .then(console.log)
@@ -30,9 +30,10 @@ export const fetchTrips = () => {
 export const addTrip = trip => {
   console.log('addTrip', trip)
   return dispatch => {
-    return fetch('https://kayaks-backend-api.herokuapp.com/trips',{
+    return fetch('https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips',{
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
       body: JSON.stringify(trip),
@@ -49,7 +50,7 @@ export const deleteTrip = id => {
   console.log('deleteTrip', id)
   return dispatch => {
     dispatch({ type: 'DELETE_TRIP', id})
-    fetch(`https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
+    fetch(`https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
       method: 'DELETE'
     })
   }
