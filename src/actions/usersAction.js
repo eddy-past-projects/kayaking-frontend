@@ -28,8 +28,9 @@ export const login = (credentials) => {
       credentials: "include",
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
-      },
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'      },
       body: JSON.stringify(credentials)
     })
       .then(resp => resp.json())
@@ -68,8 +69,9 @@ export const getCurrentUser = () => {
       credentials: "include",
       method: "GET",
       headers: {
-        "Content-Type": "application/json"
-      },
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'      },
     })
       .then(resp => resp.json())
       .then(resp => {
@@ -94,8 +96,9 @@ export const signup = (credentials) => {
       credentials: "include",
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
-      },
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'      },
       body: JSON.stringify(userInfo)
     })
       .then(resp => resp.json())
