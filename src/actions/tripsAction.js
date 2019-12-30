@@ -27,56 +27,6 @@ export const fetchTrips = () => {
 
 
 
-
-
-// export const fetchTrips = () => {
-//   return dispatch => {
-//     dispatch({ type: 'LOADING_TRIPS'})
-//     return fetch('https://kayaks-backend-api.herokuapp.com/trips',{
-//       method: 'GET',
-//                  body: JSON.stringify(),
-//                  // mode: 'no-cors',
-//                  credentials: "same-origin", //include, same-origin
-//                  headers: {Accept: 'application/json', 'Content-Type': 'application/json',},
-//              })
-//
-//
-//
-//     .then(resp => resp.json())
-//     // .then(console.log)
-//     .then(trips => {
-//       dispatch({ type: 'FETCH_TRIPS', payload: trips })});
-//     }
-//   }
-
-
-
-// fetch("https://example.com/api/request", {
-//             method: 'POST',
-//             body: JSON.stringify(data),
-//             mode: 'cors',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 "Accept": 'application/json',
-// export const addLiketoTrip = (tripId, tripLike) => {
-//   tripLike++
-//   return dispatch => {
-//     return fetch(`https://kayaks-backend-api.herokuapp.com/${tripId}`,{
-//       method: 'PATCH',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'      },
-//       body: JSON.stringify({like: tripLike}),
-//     })
-//     .then(resp => resp.json())
-//     .then(trip => {
-//       // console.log(tripLike)
-//       dispatch({type:"TRIP_LIKE", trip})
-//     })
-//   }
-// }
-
-
 export const addTrip = trip => {
   console.log('addTrip', trip)
   return dispatch => {
@@ -105,14 +55,7 @@ export const deleteTrip = id => {
   }
 }
 
-// export const getCommentForTrip = id => {
-//   return dispatch => {
-//     return fetch(`http://localhost:3000/trips/${id}`)
-//     .then(resp => resp.json())
-//     .then(comment)
-//   }
-//
-// }
+
 
 
 export const getMyTrips = id => {
