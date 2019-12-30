@@ -23,10 +23,8 @@ export const clearCurrentUser = () => {
 
 // asynchronous action creators
 export const login = (credentials) => {
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = 'https://kayaks-backend-api.herokuapp.com/login'
   return dispatch => {
-    return fetch(proxyurl + url, {
+    return fetch("https://kayaks-backend-api.herokuapp.com/login", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -57,8 +55,6 @@ export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
     // dispatch(clearMyTrips())
-
-
     return fetch('https://kayaks-backend-api.herokuapp.com/logout', {
       credentials: "include",
       method: "DELETE"
@@ -67,10 +63,8 @@ export const logout = event => {
 }
 
 export const getCurrentUser = () => {
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = 'https://kayaks-backend-api.herokuapp.com/get_current_user'
   return dispatch => {
-    return fetch(proxyurl + url, {
+    return fetch("https://kayaks-backend-api.herokuapp.com/get_current_user", {
       credentials: "include",
       method: "GET",
       headers: {
@@ -91,15 +85,12 @@ export const getCurrentUser = () => {
 }
 
 export const signup = (credentials) => {
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = 'https://kayaks-backend-api.herokuapp.com/signup'
-
   console.log('signup', credentials)
   const userInfo = {
     user: credentials
   }
   return dispatch => {
-    return fetch(proxyurl + url, {
+    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
       credentials: "include",
       method: "POST",
       headers: {

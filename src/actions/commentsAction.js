@@ -1,10 +1,8 @@
 export const fetchComments = () => {
   // console.log('fetchcomments')
   return dispatch => {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = 'https://kayaks-backend-api.herokuapp.com/comments'
     dispatch({ type: 'LOADING_COMMENTS'})
-    return fetch(proxyurl + url)
+    return fetch('https://kayaks-backend-api.herokuapp.com/comments')
 
     .then(resp => resp.json())
     .then(comments => dispatch({ type: 'FETCH_COMMENTS', payload: comments }));
@@ -13,13 +11,10 @@ export const fetchComments = () => {
 
 
 export const addComment = comment => {
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = 'https://kayaks-backend-api.herokuapp.com/comments'
-
   // console.log('addComment', comment)
   return dispatch => {
 
-    return fetch(proxyurl + url, {
+    return fetch('https://kayaks-backend-api.herokuapp.com/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,3 +43,6 @@ export const deleteComment = id => {
     })
   }
 }
+// 
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
+// const url = 'https://kayaks-backend-api.herokuapp.com/comments'
