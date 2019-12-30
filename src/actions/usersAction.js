@@ -28,7 +28,7 @@ export const login = (credentials) => {
       credentials: "include",
       method: "POST",
       headers: {
-        'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
+        'Access-Control-Allow-Origin': 'https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
       body: JSON.stringify(credentials)
@@ -69,6 +69,7 @@ export const getCurrentUser = () => {
       credentials: "include",
       method: "GET",
       headers: {
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
     })
@@ -95,7 +96,7 @@ export const signup = (credentials) => {
       credentials: "include",
       method: "POST",
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/signup',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
       body: JSON.stringify(userInfo)
