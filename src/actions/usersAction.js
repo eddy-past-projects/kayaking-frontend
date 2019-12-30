@@ -25,7 +25,7 @@ export const clearCurrentUser = () => {
 export const login = (credentials) => {
   return dispatch => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
-
+      credentials: 'include',
       method: "POST",
       headers: {
         'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
@@ -35,6 +35,7 @@ export const login = (credentials) => {
     })
       .then(resp => resp.json())
       .then(resp => {
+        console.log('login', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
@@ -74,6 +75,7 @@ export const getCurrentUser = () => {
     })
       .then(resp => resp.json())
       .then(resp => {
+        console.log('current user', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
@@ -87,22 +89,22 @@ export const getCurrentUser = () => {
 
 export const signup = (credentials) => {
   console.log('signup', credentials)
-  // const userInfo = {
-  //   user: credentials
-  // }
+  const userInfo = {
+    user: credentials
+  }
   return dispatch => {
-    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
+    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
       // credentials: "include",
       method: "POST",
       headers: {
         'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/signup',
         'Content-Type': 'application/json',
         'Accept': 'application/json'      },
-      body: JSON.stringify(credentials)
+      body: JSON.stringify(userInfo)
     })
       .then(resp => resp.json())
       .then(resp => {
-        console.log('signup', resp)
+        console.log('signup resp', resp)
         if (resp.error) {
           alert(resp.error)
         } else {
