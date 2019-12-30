@@ -78,9 +78,11 @@ export const fetchTrips = () => {
 
 
 export const addTrip = trip => {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = 'https://kayaks-backend-api.herokuapp.com/trips'
   console.log('addTrip', trip)
   return dispatch => {
-    return fetch('https://kayaks-backend-api.herokuapp.com/trips',{
+    return fetch(proxyurl + url,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

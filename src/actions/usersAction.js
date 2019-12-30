@@ -23,8 +23,10 @@ export const clearCurrentUser = () => {
 
 // asynchronous action creators
 export const login = (credentials) => {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = 'https://kayaks-backend-api.herokuapp.com/login'
   return dispatch => {
-    return fetch("https://kayaks-backend-api.herokuapp.com/login", {
+    return fetch(proxyurl + url, {
       credentials: "include",
       method: "POST",
       headers: {
