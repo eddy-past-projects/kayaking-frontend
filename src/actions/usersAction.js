@@ -24,7 +24,7 @@ export const clearCurrentUser = () => {
 // asynchronous action creators
 export const login = (credentials) => {
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
+    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
 
       method: "POST",
       headers: {
@@ -91,7 +91,7 @@ export const signup = (credentials) => {
   //   user: credentials
   // }
   return dispatch => {
-    return fetch("https://cors-anywhere.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
+    return fetch("https://kayaks-backend-api.herokuapp.com/signup", {
       // credentials: "include",
       method: "POST",
       headers: {
