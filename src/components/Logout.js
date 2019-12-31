@@ -4,8 +4,7 @@ import { logout } from '../actions/usersAction'
 
 const Logout = ({ logout, history}) => {
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault()
+  const handleOnSubmit = () => {
     logout(history)
     history.push('/');
   }
