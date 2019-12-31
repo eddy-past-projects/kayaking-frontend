@@ -34,6 +34,7 @@ componentDidMount(){
             <Route path='/signup' component={Signup} />
             <Route path='/logout' component={Logout} />
             <Route path='/newtrip' component={TripForm}/>
+              <Route path='/mytrips' render={getMyTrips}/>
 
             <Switch>
               <Route exact path='/dictionary' render={null} />
