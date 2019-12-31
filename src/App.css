@@ -10,6 +10,15 @@
   margin: 1% ;
 }
 
+.ui.form button {
+  margin: 1% ;
+}
+.ui.form.logout button {
+  text-align: center;
+  margin-bottom: 5%;
+
+}
+
 .ui.small.button  {
   margin: .5% ;
 }

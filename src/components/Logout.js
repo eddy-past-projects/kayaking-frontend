@@ -10,7 +10,7 @@ const Logout = ({logout, history}) => {
   }
 
   return (<form onSubmit={handleOnSubmit}>
-    <div className="ui form">
+    <div className="ui form, logout">
       <div className="two wide field">
 
         <button type="submit" className="ui button">Log out</button>
