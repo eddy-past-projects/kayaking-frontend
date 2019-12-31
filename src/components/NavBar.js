@@ -49,7 +49,6 @@ class NavBar extends React.Component {
         <Link to='/signup'><Button size={buttonSize} >sign up</Button></Link>
         <Link to='/login'><Button size={buttonSize} >log in</Button></Link>
         <Link to='/newtrip'><Button size={buttonSize}>new trips</Button></Link>
-      <Link to='/mytrips'><Button size={buttonSize}>my trips</Button></Link>
       <Link to='/dictionary'><Button size={buttonSize}>dictionary</Button></Link>
         <Link to='/logout'><Button size={buttonSize}>log out</Button></Link>
       <br/>
