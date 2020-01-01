@@ -39,7 +39,7 @@ export const login = (credentials) => {
         } else {
           dispatch(setCurrentUser(resp))
           dispatch(resetLogInForm())
-          // dispatch(setMyTrips())
+          dispatch(setMyTrips())
         }
       })
       .catch(console.log)
@@ -49,7 +49,7 @@ export const login = (credentials) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    // dispatch(clearMyTrips())
+    dispatch(clearMyTrips())
    return fetch('https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/logout', {
       // credentials: "include",
       method: "DELETE"
@@ -73,7 +73,7 @@ export const getCurrentUser = () => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp))
-          // dispatch(setMyTrips())
+          dispatch(setMyTrips())
         }
       })
       .catch(console.log)

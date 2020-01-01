@@ -1,16 +1,16 @@
 // synchronous action
-export const setMyTrips = trips => {
-  return {
-    type: "SET_MY_TRIPS",
-    trips
-  }
-}
-
-export const clearMyTrips = () => {
-  return {
-    type: "CLEAR_MY_TRIPS",
-  }
-}
+// export const setMyTrips = trips => {
+//   return {
+//     type: "SET_MY_TRIPS",
+//     trips
+//   }
+// }
+//
+// export const clearMyTrips = () => {
+//   return {
+//     type: "CLEAR_MY_TRIPS",
+//   }
+// }
 
 // async actions
 export const fetchTrips = () => {
@@ -59,15 +59,15 @@ export const deleteTrip = id => {
 
 
 
-export const getMyTrips = id => {
-    return dispatch => {
-        dispatch({ type: 'SET_MY_TRIPS'})
-        return fetch(`https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
-            method: 'GET',
-          })
-          .then(resp => resp.json())
-          .then(resp => {
-              dispatch(setMyTrips())
-            })
-          }
-        }
+// export const getMyTrips = id => {
+//     return dispatch => {
+//         dispatch({ type: 'GET_MY_TRIPS'})
+//         return fetch(`https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips/${id}`,{
+//             method: 'GET',
+//           })
+//           .then(resp => resp.json())
+//           .then(resp => {
+//               dispatch(getMyTrips())
+//             })
+//           }
+//         }

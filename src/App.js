@@ -9,7 +9,6 @@ import Logout from './components/Logout'
 import { Route, Switch } from 'react-router-dom'
 import { logout } from './actions/usersAction'
 import NavBar from './components/NavBar'
-import { getMyTrips } from './actions/tripsAction'
 import Home from './components/Home'
 import TripForm from './components/TripForm'
 import DictionaryContainer from './containers/DictionaryContainer'
@@ -34,12 +33,13 @@ componentDidMount(){
             <Route path='/signup' component={Signup} />
             <Route path='/logout' component={Logout} />
             <Route path='/newtrip' component={TripForm}/>
-              <Route path='/mytrips' render={getMyTrips}/>
 
             <Switch>
               <Route exact path='/dictionary' render={null} />
               <Route component={Home} />
             </Switch>
+
+
 
           </Container>
         </div>

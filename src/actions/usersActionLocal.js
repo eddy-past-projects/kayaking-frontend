@@ -1,7 +1,7 @@
 import { resetLogInForm } from './logInAction'
 import { resetSignUpForm } from './signUpAction'
-// import { setMyTrips } from './tripsAction'
-// import { clearMyTrips } from './tripsAction'
+import { setMyTrips } from './tripsAction'
+import { clearMyTrips } from './tripsAction'
 
 
 // synchronous action creators
@@ -22,10 +22,9 @@ export const clearCurrentUser = () => {
 export const login = (credentials) => {
   console.log('credentials', credentials)
   return dispatch => {
-    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
+    return fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -39,7 +38,7 @@ export const login = (credentials) => {
         } else {
           dispatch(setCurrentUser(resp))
           dispatch(resetLogInForm())
-          // dispatch(setMyTrips())
+          dispatch(setMyTrips())
         }
       })
       .catch(console.log)
@@ -49,8 +48,8 @@ export const login = (credentials) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    // dispatch(clearMyTrips())
-   return fetch('https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/logout', {
+    dispatch(clearMyTrips())
+   return fetch('http://localhost:3000/logout', {
       // credentials: "include",
       method: "DELETE"
     })
@@ -59,10 +58,9 @@ export const logout = event => {
 
 export const getCurrentUser = () => {
   return dispatch => {
-    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
+    return fetch("http://localhost:3000/get_current_user", {
         method: "GET",
         headers: {
-          'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -73,7 +71,7 @@ export const getCurrentUser = () => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp))
-          // dispatch(setMyTrips())
+          dispatch(setMyTrips())
         }
       })
       .catch(console.log)
@@ -86,10 +84,9 @@ export const signup = (credentials) => {
     user: credentials
   }
   return dispatch => {
-    return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
+    return fetch("http://localhost:3000/signup", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/signup',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },

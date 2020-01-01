@@ -1,3 +1,5 @@
+
+
 export default (state = {loading: false, trips: []}, action) => {
 
   switch(action.type) {
@@ -15,6 +17,8 @@ export default (state = {loading: false, trips: []}, action) => {
     case "DELETE_TRIP":
        let trips = state.trips.filter(trip => trip.id !== action.id)
       return {...state, trips}
+
+    
 
     // case "TRIP_LIKE":
     // // console.log('add_like reducer')
@@ -36,13 +40,6 @@ export default (state = {loading: false, trips: []}, action) => {
     //   return {...state, trips: [...tripArr]}
 
 
-      // case 'SET_MY_TRIPS':
-      // const user = setCurrentUser
-      // trips = state.trips.filter(trip => user.trips.id === action.user.id)
-      // return {
-      //   type: 'SET_MY_TRIPS',
-      //   trips
-      // }
     default:
       return state
   }

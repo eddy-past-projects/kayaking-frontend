@@ -1,10 +1,9 @@
 import React from 'react';
-import Trip from './Trip';
-import { Card } from 'semantic-ui-react'
 
 
 
-class Trips extends React.Component {
+
+class Resize extends React.Component {
 
 
   constructor(props) {
@@ -27,26 +26,9 @@ class Trips extends React.Component {
    this.setState({ width: window.innerWidth });
  }
 
- //  renderTrips (trips) {
- //   return trips.map((trip, index) =>
- //     <Trip key={trip.id} trip={trip} deleteTrip={this.props.deleteTrip}/>
- //   )
- // }
- renderTrips (trips) {
-   const tripSort = trips.sort((a, b) => {
-     if (a.start_date < b.start_date) {return 1}
-     if (a.start_date > b.start_date) {return -1}
-     return 0
-
-   })
-   return tripSort.map((trip, idx) =>
-     <Trip key={idx} trip={trip} deleteTrip={this.props.deleteTrip}/>
-   )
- }
-
   render () {
 
-    console.log(this.state, this.props)
+    console.log(this.state)
     let isMobile
 let width = this.state.width
 width <= 500 ? isMobile = true : isMobile = false
@@ -76,13 +58,13 @@ if(isMobile){
 }
 
     return (
-        <Card.Group itemsPerRow={itemsPerRow}>
-          {this.renderTrips(this.props.trips.trips)}
-        </Card.Group>
+      <div className='resize'>
+      
+      </div>
 
     )
   }
 }
 
 
-export default Trips
+export default Resize

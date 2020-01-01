@@ -1,6 +1,7 @@
 import React from 'react';
 import Trip from './Trip';
 import { Card } from 'semantic-ui-react'
+import Resize from './Resize'
 
 
 
