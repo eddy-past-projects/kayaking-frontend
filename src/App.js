@@ -21,6 +21,8 @@ componentDidMount(){
 }
 
   render() {
+    const currentUser = this.props.currentUser
+
     return (
         <div className='App'>
           <Container>
@@ -39,6 +41,9 @@ componentDidMount(){
               <Route component={Home} />
             </Switch>
 
+
+
+            { currentUser ? `hi, ${currentUser.name}`: `hi` } <br/>
 
 
           </Container>

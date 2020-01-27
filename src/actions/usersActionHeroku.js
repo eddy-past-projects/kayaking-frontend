@@ -25,7 +25,7 @@ export const login = (credentials) => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -62,7 +62,7 @@ export const getCurrentUser = () => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
         method: "GET",
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -89,7 +89,7 @@ export const signup = (credentials) => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/signup',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },

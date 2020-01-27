@@ -17,7 +17,7 @@ export const addComment = comment => {
     return fetch('https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/comments', {
       method: 'POST',
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
