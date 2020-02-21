@@ -53,15 +53,18 @@
 }
 
 
-
 hr {
   border-top: 1px ;
   color: #141414;
 }
 
-
-
   .container {
   margin-top: 20px;
   align-items: center;
+}
+
+@media (max-width: 768px){
+   {
+    display: none;
+  }
 }
