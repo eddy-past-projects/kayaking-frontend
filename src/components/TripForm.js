@@ -58,7 +58,6 @@ class TripForm extends React.Component {
             </div>
             <div className="three wide field">
               <DateInput onChange={this.handleOnChange} type={this.DateInput} name="end_date" animation='on' placeholder="end date" value={this.state.end_date} iconPosition="left" autoComplete="off"/>
-
             </div>
             <div className="two wide field">
               <button type="submit" className="ui button">Submit</button>
