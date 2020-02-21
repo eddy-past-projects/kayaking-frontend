@@ -1,7 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addTrip} from '../actions/tripsAction'
-import {DateInput} from 'semantic-ui-calendar-react';
+// import {DateInput} from 'semantic-ui-calendar-react';
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class TripForm extends React.Component {
 
@@ -19,11 +22,18 @@ class TripForm extends React.Component {
     this.props.history.push('/');
   }
 
-  handleOnChange = (e, {name, value}) => {
-    if (this.state.hasOwnProperty(name)) {
-      this.setState({[name]: value});
-    }
-  }
+  // handleOnChange = (e, {name, value}) => {
+  //   if (this.state.hasOwnProperty(name)) {
+  //     this.setState({[name]: value});
+  //   }
+  // }
+
+  handleOnChange = (date) => {
+    this.setState({
+        start_date: date,
+        end_date: date
+      });
+    };
 
   handleIfChange = (e) => {
     this.setState({
@@ -54,10 +64,13 @@ class TripForm extends React.Component {
               </label>
             </div>
             <div className="three wide field">
-              <DateInput onChange={this.handleOnChange} type={this.DateInput} value={this.state.start_date} animation='on' iconPosition="left" name="start_date" placeholder="start date" autoComplete="off"/>
+              <DatePicker selected={this.state.start_date} onChange={this.handleOnChange} showPopperArrow={false} autoComplete="off"/>
             </div>
+
+
+
             <div className="three wide field">
-              <DateInput onChange={this.handleOnChange} type={this.DateInput} name="end_date" animation='on' placeholder="end date" value={this.state.end_date} iconPosition="left" autoComplete="off"/>
+              <DatePicker selected={this.state.end_date} onChange={this.handleOnChange} autoComplete="off"/>
             </div>
             <div className="two wide field">
               <button type="submit" className="ui button">Submit</button>
@@ -70,4 +83,6 @@ class TripForm extends React.Component {
 
 }
 
-export default connect(null, {addTrip, DateInput})(TripForm)
+export default connect(null, {addTrip, DatePicker})(TripForm)
+
+// <DatePicker onChange={this.handleOnChange} type={this.DateInput} value={this.state.start_date} animation='off' iconPosition="left" name="start_date" placeholder="start date" autoComplete="off"/>
