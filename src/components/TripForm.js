@@ -33,7 +33,7 @@ class TripForm extends React.Component {
 
   render() {
     // console.log(DateInput)
-    // console.log('tripform')
+    console.log('start_date', this.state.start_date)
     return (<div>
       <h4>add a trip!</h4>
       <form onSubmit={this.handleOnSubmit}>
