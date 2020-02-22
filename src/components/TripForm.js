@@ -3,8 +3,6 @@ import {connect} from 'react-redux'
 import {addTrip} from '../actions/tripsAction'
 // import {DateInput} from 'semantic-ui-calendar-react';
 import DatePicker from "react-datepicker";
-
-
 import "react-datepicker/dist/react-datepicker.css";
 
 class TripForm extends React.Component {

@@ -1,74 +1,74 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {addTrip} from '../actions/tripsAction'
-import {DateInput} from 'semantic-ui-calendar-react';
+import CommentsContainer from '../containers/CommentsContainer'
+import { Card, Image, Icon, Button } from 'semantic-ui-react'
+// import { deleteTrip } from '../actions/tripsAction'
+// import { connect } from 'react-redux'
 
-class TripForm extends React.Component {
 
-  state = {
-    name: '',
-    water_type: "",
-    start_date: new Date(),
-    end_date: new Date()
+class Trip extends React.Component {
+
+  state ={
+    front:true
   }
 
-  handleOnSubmit = (e) => {
-    e.preventDefault()
-    this.props.addTrip(this.state)
-    this.setState({name: '', water_type: ''})
-    this.props.history.push('/');
-  }
-
-  handleOnChange = (e, {name, value}) => {
-    if (this.state.hasOwnProperty(name)) {
-      this.setState({[name]: value});
-    }
-  }
-
-  handleIfChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
+  toggleCard = ()=>{
+    this.setState((prevState) =>{
+      return {front:!prevState.front}
     })
   }
 
   render() {
-    // console.log(DateInput)
-    // console.log('tripform')
-    return (<div>
-      <h4>add a trip!</h4>
-      <form onSubmit={this.handleOnSubmit}>
-        <div className="ui form">
-          <div className="fields">
-            <div className="five wide field">
-              <input onChange={this.handleIfChange} value={this.state.name} type="text" name="name" placeholder="name" autoComplete="off"/><br/>
-            </div>
-            <div className="three wide field">
-              <label>water type
-                <select onChange={this.handleIfChange} value={this.state.water_type} type="text" name="water_type" placeholder="water type" autoComplete="off">
-                  <option value='select'>select below</option>
-                  <option value="bay">bay</option>
-                  <option value="lake">lake</option>
-                  <option value="ocean">ocean</option>
-                  <option value="river">river</option>
-                </select>
-              </label>
-            </div>
-            <div className="three wide field">
-              <DateInput onChange={this.handleOnChange} type={this.DateInput} value={this.state.start_date} animation='off' iconPosition="left" name="start_date" placeholder="start date" autoComplete="off"/>
-            </div>
-            <div className="three wide field">
-              <DateInput onChange={this.handleOnChange} type={this.DateInput} name="end_date" animation='off' placeholder="end date" value={this.state.end_date} iconPosition="left" autoComplete="off"/>
+    // console.log('trip', this.props)
+    const { trip } = this.props
 
-            </div>
-            <div className="two wide field">
-              <button type="submit" className="ui button">Submit</button>
-            </div>
-          </div>
+    return(
+      <Card >
+        <Image src={trip.image} />
+
+<div className='style head' >
+
+        <Card.Header>
+            {trip.name}
+          </Card.Header>
+
         </div>
-      </form>
-    </div>)
-  }
 
+        { (this.state.front) ?
+        (<>
+        <Card.Content >
+          <Card.Description>
+            <h4>water type:<br/> {trip.water_type}<br/>
+            start date:<br/>  {trip.start_date}<br/>
+            end date:<br/>  {trip.end_date}</h4>
+          <hr></hr>
+
+
+          </Card.Description>
+
+          <Card.Content extra>
+
+              <a>
+                <Icon name='delete' onClick={() => this.props.deleteTrip(trip.id)}/> delete trip
+                </a>
+
+              <hr></hr>
+                <Button size='mini' onClick={this.toggleCard}>flip for comments</Button>
+          </Card.Content>
+        </Card.Content>
+
+          </>) :
+        <Card.Content >
+        <CommentsContainer tripId={trip.id}/><br/>
+            <hr></hr>
+          <Button size='mini' onClick={this.toggleCard}>flip for front</Button>
+        </Card.Content >
+    }
+      </Card>
+    )
+  }
 }
 
-export default connect(null, {addTrip, DateInput})(TripForm)
+
+export default Trip
+
+// <Like tripId={trip.id} tripLike={trip.like}/>
