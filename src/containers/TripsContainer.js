@@ -9,6 +9,9 @@ import { fetchTrips } from '../actions/tripsAction'
 
 class TripsContainer extends React.Component {
 
+  componentDidMount(){
+    this.props.fetchTrips()
+  }
   //
   componentDidUpdate(prevProps) {
     // console.log('componentDidUpdate', this.props.trips.trips.length)
@@ -16,12 +19,9 @@ class TripsContainer extends React.Component {
       this.props.fetchTrips(this.props.trips.trips);
     }
   }
-  componentDidMount(){
-    this.props.fetchTrips()
-  }
 
 
-  
+
 
   render () {
     return (

@@ -31,6 +31,8 @@ class TripForm extends React.Component {
     })
   }
 
+
+
   render() {
     // console.log(DateInput)
     console.log('start_date', this.state.start_date)
@@ -40,11 +42,11 @@ class TripForm extends React.Component {
         <div className="ui form">
           <div className="fields">
             <div className="five wide field">
-              <input onChange={this.handleIfChange} value={this.state.name} type="text" name="name" placeholder="name" autoComplete="off"/><br/>
+              <input onChange={this.handleIfChange} value={this.state.name}  type="text" name="name" placeholder="name" autoComplete="off"/><br/>
             </div>
             <div className="three wide field">
               <label>water type
-                <select onChange={this.handleIfChange} value={this.state.water_type} type="text" name="water_type" placeholder="water type" autoComplete="off">
+                <select onChange={this.handleIfChange} value={this.state.water_type} type="text" name="water_type"  placeholder="water type" autoComplete="off">
                   <option value='select'>select below</option>
                   <option value="bay">bay</option>
                   <option value="lake">lake</option>

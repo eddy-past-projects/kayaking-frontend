@@ -30,7 +30,7 @@ export const fetchTrips = () => {
 export const addTrip = trip => {
   console.log('addTrip', trip)
   return dispatch => {
-    return fetch('https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/trips',{
+    return fetch('https://kayaks-backend-api.herokuapp.com/trips',{
       method: 'POST',
       headers: {
         'Access-Control-Allow-Origin': '*',
