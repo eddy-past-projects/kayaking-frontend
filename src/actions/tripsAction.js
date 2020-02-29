@@ -42,7 +42,7 @@ export const addTrip = trip => {
     })
     .then(resp => resp.json())
     .then(trip => {
-      (console.log('add trip',trip))
+      // (console.log('add trip',trip))
       dispatch({type:'ADD_TRIP', trip:trip})
     })
   }
