@@ -25,7 +25,7 @@ export const login = (credentials) => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/login", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/login',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -39,7 +39,7 @@ export const login = (credentials) => {
         } else {
           dispatch(setCurrentUser(resp))
           dispatch(resetLogInForm())
-          dispatch(setMyTrips())
+          // dispatch(setMyTrips())
         }
       })
       .catch(console.log)
@@ -49,7 +49,7 @@ export const login = (credentials) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    dispatch(clearMyTrips())
+    // dispatch(clearMyTrips())
    return fetch('https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/logout', {
       // credentials: "include",
       method: "DELETE"
@@ -62,7 +62,7 @@ export const getCurrentUser = () => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/get_current_user", {
         method: "GET",
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
@@ -73,7 +73,7 @@ export const getCurrentUser = () => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp))
-          dispatch(setMyTrips())
+          // dispatch(setMyTrips())
         }
       })
       .catch(console.log)
@@ -89,7 +89,7 @@ export const signup = (credentials) => {
     return fetch("https://safe-waters-79087.herokuapp.com/https://kayaks-backend-api.herokuapp.com/signup", {
         method: "POST",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kayaks-backend-api.herokuapp.com/signup',
+          'Access-Control-Allow-Origin': 'https://kayaking-frontend.herokuapp.com/',
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
